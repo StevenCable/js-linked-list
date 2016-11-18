@@ -110,8 +110,4 @@ function linkedListGenerator(){
     };
   }
 
-var test = linkedListGenerator();
-test.add('abc');
-test.add('def');
-test.add('ghi');
-test.add('jkl');
+
