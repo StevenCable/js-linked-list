@@ -40,24 +40,22 @@ function linkedListGenerator(){
       }
 
 
-      function get(index){
-        var currentNode = head;
-        var count = 0;
+      function get(number){
+       var currentNode = head;
 
-        while(currentNode !== null){
-          if(count === index){
-            return currentNode;
-          } 
-          else 
-          {
-            currentNode = currentNode.next;
-            count ++;
-          } 
-        }
-        if(currentNode === null){
-          return false;
-        }
-      }
+       if(number<0){
+        return false;
+       }
+       for (var i = 0; i < number; i++) {
+         if(currentNode.next === null){
+           return false;
+         }
+         else{
+           currentNode = currentNode.next;
+         }
+       }
+         return currentNode;
+       }
 
       function remove(number){
 
